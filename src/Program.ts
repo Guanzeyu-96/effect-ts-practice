@@ -1,7 +1,6 @@
 import { DevTools } from "@effect/experimental"
 import { NodeRuntime, NodeSocket } from "@effect/platform-node"
-import { Layer } from "effect"
-import * as Effect from "effect/Effect"
+import { Effect, Layer } from "effect"
 
 const program = Effect.log("Hello!").pipe(
   Effect.delay(2000),
