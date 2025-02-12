@@ -129,7 +129,7 @@ const withoutSuspend = (a: number, b: number) =>
     ? Effect.fail(new Error("Cannot divide by zero"))
     : Effect.succeed(a / b)
 
-// 这里就可以正常进行类型推断
+// 这里就可以正常进行类型推断，原因也是由惰性计算带来的
 const withSuspend = (a: number, b: number) =>
   Effect.suspend(() =>
     b === 0
